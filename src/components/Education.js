@@ -55,11 +55,14 @@ export class Education extends Component {
   }
 
   removeEntry(e) {
-    console.log(`Delete entry with id ${e.target.dataset.key}`);
+    const newState = this.state.educationItems.filter(item => item.id === e.target.dataset.key);
+   
+    this.setState({
+        educationItems: newState,
+    })
   }
 
   render() {
-    const { handleOnChange } = this.props;
     const { educationItems } = this.state;
 
     return (
