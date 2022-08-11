@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { PersonalInfo } from "./PersonalInfo";
 
 export class EditForm extends Component {
   constructor(props) {
