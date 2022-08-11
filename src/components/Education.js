@@ -19,6 +19,7 @@ export class Education extends Component {
     }
 
     this.handleOnChange = this.handleOnChange.bind(this);
+    this.addEntry = this.addEntry.bind(this);
   }
 
   handleOnChange(e) {
@@ -39,10 +40,23 @@ export class Education extends Component {
     });
   }
 
+  addEntry() {
+    const blankEntry = {
+        id: uniqid(),
+        institution: '',
+        degree: '',
+        start: '',
+        end: '',
+    }
+    this.setState({
+        educationItems: [...this.state.educationItems, blankEntry],
+    });
+  }
+
   render() {
     const { handleOnChange } = this.props;
     const { educationItems } = this.state;
-    
+
     return (
         <fieldset>
           <h3>Education</h3>
@@ -51,7 +65,7 @@ export class Education extends Component {
               return <li key={item.id}><EducationItem handleOnChange={this.handleOnChange} id={item.id}/></li>
             })}
           </ul>
-          <button type="button">Add entry</button>
+          <button type="button" onClick={this.addEntry}>Add entry</button>
         </fieldset>
     )
   }
