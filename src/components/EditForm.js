@@ -21,7 +21,9 @@ export class EditForm extends Component {
   }
 
   updateState(propertyName, value) {
-    console.log(propertyName + ': ' + value);
+    this.setState({
+        [propertyName]: value,
+    })
   }
 
   render() {
