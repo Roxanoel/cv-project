@@ -6,7 +6,7 @@ export class EducationItem extends Component {
   }
 
   render() {
-    const { handleOnChange, id } = this.props;
+    const { handleOnChange, id, removeEntry } = this.props;
 
     return (
         <fieldset>
@@ -18,6 +18,7 @@ export class EducationItem extends Component {
           <input type="month" name="start" id="start" onChange={handleOnChange} data-key={id}></input>
           <label htmlFor="end">End: </label>
           <input type="month" name="end" id="end" onChange={handleOnChange} data-key={id}></input>
+          <button type="button" onClick={removeEntry} data-key={id}>Remove</button>
         </fieldset>
     )
   }
