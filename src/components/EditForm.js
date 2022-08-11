@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Education } from "./Education";
 import { PersonalInfo } from "./PersonalInfo";
 
 export class EditForm extends Component {
@@ -31,6 +32,7 @@ export class EditForm extends Component {
         <form>
             {/* sub-forms will be here */}
             <PersonalInfo handleOnChange={this.handleOnChange} />
+            <Education handleOnChange={this.handleOnChange} />
             <button>Submit</button> 
         </form>
     )
