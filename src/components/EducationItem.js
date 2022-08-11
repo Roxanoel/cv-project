@@ -14,9 +14,9 @@ export class EducationItem extends Component {
           <input id="institution" name="institution" onChange={handleOnChange}></input>
           <label htmlFor="degree">Degree: </label>
           <input id="degree" name="degree" onChange={handleOnChange}></input>
-          <label htmlFor="start"></label>
+          <label htmlFor="start">Start: </label>
           <input type="month" name="start" id="start" onChange={handleOnChange}></input>
-          <label htmlFor="end"></label>
+          <label htmlFor="end">End: </label>
           <input type="month" name="end" id="end" onChange={handleOnChange}></input>
         </fieldset>
     )
