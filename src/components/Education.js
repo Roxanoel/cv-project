@@ -7,7 +7,7 @@ export class Education extends Component {
     super(props);
 
     const defaultEducation = {
-        id: uniqid,
+        id: uniqid(),
         institution: '',
         degree: '',
         start: '', 
@@ -16,34 +16,39 @@ export class Education extends Component {
 
     this.state = {
         educationItems: [defaultEducation],
-        currentItem: {
-            id: '',
-            institution: '',
-            degree: '',
-            start: '',
-            end: '',
-        }
     }
 
     this.handleOnChange = this.handleOnChange.bind(this);
   }
 
   handleOnChange(e) {
-    // Generate unique id + store educationItem info
+    // use map to change only relevant values
+    const newState = this.state.educationItems.map(item => {
+            if(item.id === e.target.dataset.key) {
+                // Modify only the item whose id matches the key of the element triggering onChange
+                const itemCopy = item;
+                itemCopy[e.target.name] = e.target.value;
+                return itemCopy;
+            }
+            
+            return item;
+        });
+    // Update array to newly updated array
     this.setState({
-
+        educationItems: newState,
     });
   }
 
   render() {
     const { handleOnChange } = this.props;
     const { educationItems } = this.state;
+    
     return (
         <fieldset>
           <h3>Education</h3>
           <ul>
             {educationItems.map((item) => {
-              return <li key={item.id}><EducationItem handleOnChange={this.handleOnChange}/></li>
+              return <li key={item.id}><EducationItem handleOnChange={this.handleOnChange} id={item.id}/></li>
             })}
           </ul>
           <button type="button">Add entry</button>
