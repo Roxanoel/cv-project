@@ -39,6 +39,8 @@ export class Education extends Component {
     this.setState({
         educationItems: newState,
     });
+    // Trigger event in parent component
+    this.props.handleEducationChange(this.state.educationItems);
   }
 
   addEntry() {
@@ -52,6 +54,8 @@ export class Education extends Component {
     this.setState({
         educationItems: [...this.state.educationItems, blankEntry],
     });
+    // Trigger event in parent component
+    this.props.handleEducationChange(this.state.educationItems);
   }
 
   removeEntry(e) {
@@ -60,6 +64,9 @@ export class Education extends Component {
     this.setState({
         educationItems: newState,
     })
+
+    // Trigger event in parent component
+    this.props.handleEducationChange(this.state.educationItems);
   }
 
   render() {

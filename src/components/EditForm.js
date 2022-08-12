@@ -10,15 +10,23 @@ export class EditForm extends Component {
         name: '',
         email: '',
         phone: '',
+        education: [],
     }
 
     this.handleOnChange = this.handleOnChange.bind(this);
+    this.handleEducationChange = this.handleEducationChange.bind(this);
     this.updateState = this.updateState.bind(this);
   }
 
   handleOnChange(e) {
     // Update the value in state
     this.updateState(e.target.id, e.target.value);
+  }
+
+  handleEducationChange(educationItems) {
+    this.setState({
+        education: educationItems,
+    })
   }
 
   updateState(propertyName, value) {
@@ -28,11 +36,12 @@ export class EditForm extends Component {
   }
 
   render() {
+    console.log(this.state);
     return (
         <form>
             {/* sub-forms will be here */}
             <PersonalInfo handleOnChange={this.handleOnChange} />
-            <Education handleOnChange={this.handleOnChange} />
+            <Education handleEducationChange={this.handleEducationChange} />
             <button>Submit</button> 
         </form>
     )
