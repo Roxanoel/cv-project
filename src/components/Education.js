@@ -12,6 +12,7 @@ export class Education extends Component {
         degree: '',
         start: '', 
         end: '',
+        gpa: '',
     };
 
     this.state = {
@@ -50,6 +51,7 @@ export class Education extends Component {
         degree: '',
         start: '',
         end: '',
+        gpa: '',
     }
     this.setState({
         educationItems: [...this.state.educationItems, blankEntry],
