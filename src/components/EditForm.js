@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Education } from "./Education";
 import { PersonalInfo } from "./PersonalInfo";
+import { Experience } from "./Experience";
 
 export class EditForm extends Component {
   constructor(props) {
@@ -11,6 +12,7 @@ export class EditForm extends Component {
         email: '',
         phone: '',
         education: [],
+        experience: [],
     }
 
     this.handleOnChange = this.handleOnChange.bind(this);
@@ -26,7 +28,13 @@ export class EditForm extends Component {
   handleEducationChange(educationItems) {
     this.setState({
         education: educationItems,
-    })
+    });
+  }
+
+  handleExperienceChange(experienceItems) {
+    this.setState({
+      experience: experienceItems,
+    });
   }
 
   updateState(propertyName, value) {
@@ -39,9 +47,9 @@ export class EditForm extends Component {
     console.log(this.state);
     return (
         <form>
-            {/* sub-forms will be here */}
             <PersonalInfo handleOnChange={this.handleOnChange} />
             <Education handleEducationChange={this.handleEducationChange} />
+            <Experience handleExperienceChange={this.handleExperienceChange} />
             <button>Submit</button> 
         </form>
     )
