@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { EditForm } from "./components/EditForm";
+import { EditForm } from "./components/input/EditForm";
 
 class App extends Component {
   constructor(props) {
