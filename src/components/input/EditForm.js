@@ -18,7 +18,6 @@ export class EditForm extends Component {
     this.handleOnChange = this.handleOnChange.bind(this);
     this.handleEducationChange = this.handleEducationChange.bind(this);
     this.updateState = this.updateState.bind(this);
-    this.handleOnSubmit = this.handleOnSubmit.bind(this);
   }
 
   handleOnChange(e) {
@@ -44,16 +43,10 @@ export class EditForm extends Component {
     })
   }
 
-  handleOnSubmit(e) {
-    e.preventDefault();
-    /* For now */ 
-    console.log('Form submitted');
-  }
-
   render() {
     console.log(this.state);
     return (
-        <form onSubmit={this.handleOnSubmit}>
+        <form onSubmit={this.props.handleOnSubmit}>
             <PersonalInfo handleOnChange={this.handleOnChange} />
             <Education handleEducationChange={this.handleEducationChange} />
             <Experience handleExperienceChange={this.handleExperienceChange} />

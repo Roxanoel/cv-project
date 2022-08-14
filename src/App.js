@@ -9,12 +9,20 @@ class App extends Component {
     this.state = {
 
     }
+
+    this.handleSubmitForm = this.handleSubmitForm.bind(this);
+  }
+
+  handleSubmitForm(e) {
+    e.preventDefault();
+    /* For now */ 
+    console.log('Form submitted');
   }
   
   render() {
     return (
       <div>
-        <EditForm />
+        <EditForm handleOnSubmit={this.handleSubmitForm} />
         <CV />
       </div>
     );
