@@ -6,6 +6,12 @@ export class CV extends Component {
     }
 
     render() {
-        return <div />;
+        const { name } = this.props;
+
+        return (
+        <div>
+            <h1>{name}</h1>
+        </div>
+        );
     }
 }
