@@ -7,22 +7,32 @@ class App extends Component {
     super(props);
 
     this.state = {
-
+      name: '',
+      email: '',
+      phone: '',
+      education: [],
+      experience: [],
     }
-
-    this.handleSubmitForm = this.handleSubmitForm.bind(this);
+    
+    this.updateAppState = this.updateAppState.bind(this);
   }
 
-  handleSubmitForm(e) {
-    e.preventDefault();
-    /* For now */ 
-    console.log('Form submitted');
+  updateAppState(formData) {
+    this.setState({
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      education: formData.education,
+      experience: formData.experience,
+    });
   }
+
   
   render() {
+
     return (
       <div>
-        <EditForm handleOnSubmit={this.handleSubmitForm} />
+        <EditForm updateAppState={this.updateAppState} />
         <CV />
       </div>
     );
