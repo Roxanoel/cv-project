@@ -33,7 +33,7 @@ class App extends Component {
     return (
       <div>
         <EditForm updateAppState={this.updateAppState} />
-        <CV />
+        <CV data={this.state}/>
       </div>
     );
   }
