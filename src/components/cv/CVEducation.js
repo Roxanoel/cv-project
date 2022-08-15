@@ -8,8 +8,12 @@ export class CVEducation extends Component {
 
     render() {
         return (
-            <div>
-
+            <div>  {/* Will likely be some kind of grid? */}
+                {/* Institution */}
+                {/* Degree */}
+                {/* start */}
+                {/* end */}
+                {/* gpa */}
             </div>
         )
     };
