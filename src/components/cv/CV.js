@@ -11,17 +11,27 @@ export class CV extends Component {
         return (
         <div>
             <div>
-                <h1>{data.name}</h1>
+                <h2>{data.name}</h2>
                 <span>{data.email}</span>  {/* Add label later */}
                 <span>{data.phone}</span>  {/* Add label later */}
             </div>
             <div>
-                <h2>Education</h2>
+                <h3>Education</h3>
                 {/* Loop over education items */}
+                <ul>
+                    {data.education.forEach(item => {
+                        return <li>
+
+                        </li>
+                    })}
+                </ul>
             </div>
             <div>
-                <h2>Experience</h2>
+                <h3>Experience</h3>
                 {/* Loop over experience items */}
+                <ul>
+                    
+                </ul>
             </div>
         </div>
         );
