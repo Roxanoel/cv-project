@@ -7,10 +7,17 @@ export class CVExperience extends Component {
     }
 
     render() {
-        return (
-            <div>
-                
-            </div>
+        const {experience} = this.props;
+
+        return(
+              <ol>
+                {experience.map(item => {
+                    return <li key={item.id}>
+                        <CVExperienceItem id={item.id} title={item.title} employer={item.employer} 
+                        start={item.start} end={item.end} description={item.description} />
+                    </li>
+                })}
+              </ol>
         )
     };
 }
