@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export class CVListSection extends Component {
+export class CVEducationItem extends Component {
     constructor(props) {
         super(props);
     }
@@ -8,7 +8,7 @@ export class CVListSection extends Component {
     render() {
         return (
             <div>
-                
+
             </div>
         )
     };
