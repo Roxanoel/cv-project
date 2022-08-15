@@ -23,10 +23,7 @@ export class CV extends Component {
             </div>
             <div>
                 <h3>Experience</h3>
-                {/* Loop over experience items */}
-                <ul>
-                    
-                </ul>
+                <CVExperience experience={data.experience} />
             </div>
         </div>
         );
