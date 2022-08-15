@@ -7,14 +7,17 @@ export class CVEducation extends Component {
     }
 
     render() {
-        return (
-            <div>  {/* Will likely be some kind of grid? */}
-                {/* Institution */}
-                {/* Degree */}
-                {/* start */}
-                {/* end */}
-                {/* gpa */}
-            </div>
+        const {education} = this.props;
+
+        return(
+              <ol>
+                {education.forEach(item => {
+                    return <li key={item.id}>
+                        <CVEducationItem id={item.id} institution={item.institution}
+                        degree={item.degree} start={item.start} end={item.end} gpa={item.gpa} />
+                    </li>
+                })}
+              </ol>
         )
     };
 }
