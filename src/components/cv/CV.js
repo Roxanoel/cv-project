@@ -19,14 +19,7 @@ export class CV extends Component {
             </div>
             <div>
                 <h3>Education</h3>
-                {/* Loop over education items */}
-                <ul>
-                    {data.education.forEach(item => {
-                        return <li>
-
-                        </li>
-                    })}
-                </ul>
+                <CVEducation education={data.education} />
             </div>
             <div>
                 <h3>Experience</h3>

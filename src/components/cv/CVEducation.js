@@ -11,7 +11,7 @@ export class CVEducation extends Component {
 
         return(
               <ol>
-                {education.forEach(item => {
+                {education.map(item => {
                     return <li key={item.id}>
                         <CVEducationItem id={item.id} institution={item.institution}
                         degree={item.degree} start={item.start} end={item.end} gpa={item.gpa} />

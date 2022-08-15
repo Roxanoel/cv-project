@@ -21,7 +21,7 @@ export class CVEducationItem extends Component {
                 {/* Degree */}
                 <li key={`${id}-degree`}>{degree}</li>
                 {/* start + end */}
-                <li key={`${id}-dates`}>{`${start}-${(end === '') ? end : '...'}`}</li>
+                <li key={`${id}-dates`}>{`${start}-${(end !== '') ? end : '...'}`}</li>
                 {/* gpa */}
                 <li key={`${id}-gpa`}>{gpa}</li>
             </ul>
