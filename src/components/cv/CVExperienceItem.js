@@ -6,10 +6,25 @@ export class CVExperienceItem extends Component {
     }
 
     render() {
-        return (
-            <div>
+        const {
+            id, 
+            title, 
+            employer, 
+            start, 
+            end, 
+            description} = this.props;
 
-            </div>
+        return (
+            <ul>  {/* Will likely be some kind of grid? + add labels later */}
+                {/* Institution */}
+                <li key={`${id}-title`}>{title}</li>
+                {/* Degree */}
+                <li key={`${id}-employer`}>{employer}</li>
+                {/* start + end */}
+                <li key={`${id}-dates`}>{`${start}-${(end !== '') ? end : '...'}`}</li>
+                {/* gpa */}
+                <li key={`${id}-descr`}>{description}</li>
+            </ul>
         )
     };
 }
