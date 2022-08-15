@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { CVListSection } from "./CVListSection";
 
 export class CV extends Component {
     constructor(props) {
