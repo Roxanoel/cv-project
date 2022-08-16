@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { EditForm } from "./components/input/EditForm";
 import { CV } from "./components/cv/CV";
+import "./css/styles.scss";
 
 class App extends Component {
   constructor(props) {
@@ -31,7 +32,7 @@ class App extends Component {
   render() {
 
     return (
-      <div>
+      <div id='main'>
         <EditForm updateAppState={this.updateAppState} />
         <CV data={this.state}/>
       </div>
