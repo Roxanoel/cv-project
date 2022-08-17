@@ -1,0 +1,30 @@
+form {
+    display: flex;
+    flex-direction: column;
+
+    fieldset.personal-info {
+        display: inline-grid;
+        grid-template-columns: auto auto;
+
+        h3 {
+            grid-column: 1 / -1;
+        }
+    }
+
+    fieldset.list-section {
+        display: flex;
+        flex-direction: column;
+
+        ul {
+            fieldset {
+                display: inline-grid;
+                grid-template-columns: auto auto;
+
+                button {
+                    grid-column: 1 / -1;
+                }
+            }
+        }
+    }
+}
+

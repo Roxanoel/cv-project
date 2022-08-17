@@ -75,7 +75,7 @@ export class Education extends Component {
     const { educationItems } = this.state;
 
     return (
-        <fieldset>
+        <fieldset className="list-section">
           <h3>Education</h3>
           <ul>
             {educationItems.map((item) => {

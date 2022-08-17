@@ -75,7 +75,7 @@ export class Experience extends Component {
     const { experienceItems } = this.state;
 
     return (
-        <fieldset>
+        <fieldset className="list-section">
           <h3>Experience</h3>
           <ul>
             {experienceItems.map((item) => {

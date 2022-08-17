@@ -8,7 +8,7 @@ export class PersonalInfo extends Component {
   render() {
     const { handleOnChange } = this.props;
     return (
-        <fieldset>
+        <fieldset className="personal-info">
           <h3>Personal Information</h3>
           <label htmlFor="name">Name: </label>
           <input id="name" name="name" onChange={handleOnChange}></input>
