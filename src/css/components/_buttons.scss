@@ -20,14 +20,25 @@ button {
     /* Font size & weigth */
     font-size: 16px;
     font-weight: 600;
+    /* Default colours */
+    background-color: palette.$charcoal;
+    color: white;
+        &:active{
+            background-color: palette.$dark-charcoal;
+        }
 }
 
 /* coloured buttons */
 .remove-btn {
-    @include coloured-btn(red, darkred);
+    @include coloured-btn(palette.$red-light, palette.$red-dark);
 }
+.add-btn {
+    @include coloured-btn(palette.$blue-light, palette.$blue-dark);
+}
+
 
 /* Special buttons */ 
 #submit-form-btn {
     min-width: 10%;
+    @include coloured-btn(palette.$purple-light, palette.$purple-dark);
 }

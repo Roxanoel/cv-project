@@ -15,6 +15,9 @@ module.exports = {
             // Compiles Sass to CSS
             "sass-loader",
           ],
+          options: {
+            implementation: require('sass')
+          }
         },
       ],
     },
