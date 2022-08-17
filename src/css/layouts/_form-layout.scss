@@ -1,10 +1,10 @@
 form {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 
     fieldset.personal-info {
-        display: inline-grid;
-        grid-template-columns: auto auto;
+        display: grid;
         gap: 5px;
         align-items: center;
 
@@ -19,7 +19,7 @@ form {
 
         ul {
             display: grid; 
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 10px;
             grid-auto-rows: minmax(100px, auto);
 
@@ -40,6 +40,10 @@ form {
             grid-column: 1 / -1;
             justify-self: center;
         }
+    }
+
+    h3 {
+        padding: 10px 0px;
     }
 }
 
