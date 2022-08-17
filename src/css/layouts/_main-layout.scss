@@ -1,7 +1,14 @@
 #main {
+    /* Grid */
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+
+    /* Sizing */
     width: 100vw;
     height: 100vh;
+
+    /* Padding */
+    padding: 2rem;
+
 }
