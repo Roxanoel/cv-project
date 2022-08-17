@@ -1,0 +1,25 @@
+@use '../general/colour-palette' as palette;
+
+/* Default */ 
+fieldset {
+    /* Border */
+    border: 2px dashed palette.$off-white;
+    border-radius: 10px;
+
+    /* Padding & margins */
+    padding: 5px 10px;
+
+}
+
+/* Fieldset which is within a list section */ 
+.list-section {
+    fieldset{
+        /* Border */
+        border: none;
+        /* Background */
+        background-color: palette.$off-white;
+        /* Padding & margins */ 
+        padding-top: 10px;
+    }
+}
+
