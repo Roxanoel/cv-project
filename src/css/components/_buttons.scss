@@ -1,6 +1,11 @@
-/* Mixins */
-@mixin coloured-btn($base-colour, $hover-colour) {
+@use '../general/colour-palette' as palette;
 
+/* Mixins */
+@mixin coloured-btn($base-colour, $click-colour) {
+    background-color: $base-colour;
+    &:active {
+        background-color: $click-colour;
+    }
 }
 
 /* default button */
@@ -15,6 +20,11 @@ button {
     /* Font size & weigth */
     font-size: 16px;
     font-weight: 600;
+}
+
+/* coloured buttons */
+.remove-btn {
+    @include coloured-btn(red, darkred);
 }
 
 /* Special buttons */ 

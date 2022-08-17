@@ -20,7 +20,7 @@ export class EducationItem extends Component {
           <input type="month" name="end" id="end" onChange={handleOnChange} data-key={id}></input>
           <label htmlFor="gpa">GPA: </label>
           <input name="gpa" id="gpa" onChange={handleOnChange} data-key={id}></input>
-          <button type="button" onClick={removeEntry} data-key={id}>Remove</button>
+          <button type="button" className="remove-btn" onClick={removeEntry} data-key={id}>Remove</button>
         </fieldset>
     )
   }
