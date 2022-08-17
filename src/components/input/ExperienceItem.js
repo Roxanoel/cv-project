@@ -19,7 +19,7 @@ export class ExperienceItem extends Component {
           <label htmlFor="end">End: </label>
           <input type="month" name="end" id="end" onChange={handleOnChange} data-key={id}></input>
           <label htmlFor="description">Description: </label>
-          <textarea name="description" id="description" onChange={handleOnChange} data-key={id} />
+          <textarea name="description" id="description" rows="5" onChange={handleOnChange} data-key={id} />
           <button type="button" className="remove-btn" onClick={removeEntry} data-key={id}>Remove</button>
         </fieldset>
     )

@@ -1,0 +1,14 @@
+@use '../general/colour-palette' as palette;
+
+input {
+    border: 1px solid palette.$light-grey;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+textarea {
+    border: 1px solid palette.$light-grey;
+    border-radius: 5px;
+    padding: 5px 10px;
+    resize: none;
+}
