@@ -1,0 +1,7 @@
+@use '../general/colour-palette' as palette;
+
+form {
+    border-radius: 10px;
+    background-color: palette.$off-white;
+    padding: 10px;
+}

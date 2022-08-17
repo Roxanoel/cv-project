@@ -1,0 +1,5 @@
+@use '../general/colour-palette' as palette;
+
+#root {
+    background-color: palette.$dark-charcoal;
+}

@@ -1,6 +1,11 @@
 /* This file contains all imports for reusable components,
  such as buttons, input fields, headings, etc.
 */
+/* Page background */ 
+@import './background';
+
+/* Form */ 
+@import './form';
 
 /* Fieldsets */ 
 @import './fieldsets';
