@@ -58,9 +58,7 @@ export class EditForm extends Component {
             <PersonalInfo handleOnChange={this.handleOnChange} />
             <Education handleEducationChange={this.handleEducationChange} />
             <Experience handleExperienceChange={this.handleExperienceChange} />
-            <div className="btn-container">
-              <button>Submit</button> 
-            </div>
+            <button id='submit-form-btn'>Submit</button> 
         </form>
     )
   }
