@@ -1,0 +1,18 @@
+/* Mixins */
+@mixin coloured-btn($base-colour, $hover-colour) {
+
+}
+
+/* default button */
+button {
+    /* Padding & margin */
+    padding: 10px 20px;
+    margin: 5px;
+    /* Rounded shape */
+    border-radius: 20px;
+    /* Sizing */ 
+    width: fit-content;
+    /* Font size & weigth */
+    font-size: 16px;
+    font-weight: 600;
+}
