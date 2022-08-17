@@ -16,14 +16,25 @@ form {
         flex-direction: column;
 
         ul {
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            grid-auto-rows: minmax(100px, auto);
+
             fieldset {
                 display: inline-grid;
                 grid-template-columns: auto auto;
 
                 button {
                     grid-column: 1 / -1;
+                    justify-self: end;
                 }
             }
+        }
+
+        .add-btn {
+            grid-column: 1 / -1;
+            justify-self: center;
         }
     }
 }

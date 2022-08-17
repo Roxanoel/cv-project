@@ -82,7 +82,7 @@ export class Education extends Component {
               return <li key={item.id}><EducationItem id={item.id} handleOnChange={this.handleOnChange} removeEntry={this.removeEntry}/></li>
             })}
           </ul>
-          <button type="button" onClick={this.addEntry}>Add entry</button>
+          <button className="add-btn" type="button" onClick={this.addEntry}>Add entry</button>
         </fieldset>
     )
   }
