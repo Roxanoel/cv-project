@@ -1,0 +1,11 @@
+/* This file contains styling for centring a button in a button container. */
+
+.btn-container {
+    width: 100%;
+    display: grid;
+    
+    button {
+        align-self: center;
+        justify-self: center;
+    }
+}
