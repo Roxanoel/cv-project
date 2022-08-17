@@ -1,8 +1,12 @@
 #main {
+    /* Box type */
+    box-sizing: border-box;
+
     /* Grid */
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+    gap: 2rem;
 
     /* Sizing */
     width: 100vw;
