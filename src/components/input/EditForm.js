@@ -48,6 +48,8 @@ export class EditForm extends Component {
 
   handleSubmitForm(e) {
     e.preventDefault();
+    /* Add custom validation here */
+
     /* For now */ 
     this.props.updateAppState(this.state);
   }
